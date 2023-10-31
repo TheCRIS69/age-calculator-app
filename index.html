@@ -16,25 +16,29 @@
   <main class="content">
     <div>
       <form action="" class="date-selection">
-        <label for="date-selection__day">DAY</label>
-        <input type="text" id="date-selection__day" placeholder="DD">
-
-        <label for="date-selection__month">MONTH</label>
-        <input type="text" id="date-selection__day" placeholder="MM">
-
-        <label for="date-selection__year">YEAR</label>
-        <input type="text" id="date-selection__year" placeholder="YYYY">
+        <div class="flex-column">
+          <label for="date-selection__day" class="date-selection__text">DAY</label>
+          <input type="number" min="1" max="31" id="date-selection__day" placeholder="DD">
+        </div>
+        <div class="flex-column">
+          <label for="date-selection__month" class="date-selection__text">MONTH</label>
+          <input type="number" min="1" max="12" id="date-selection__day" placeholder="MM">
+        </div>
+        <div class="flex-column">
+          <label for="date-selection__year" class="date-selection__text">YEAR</label>
+          <input type="number" min="1900" max="2023" id="date-selection__year" placeholder="YYYY">
+        </div>
       </form>
     </div>
-
-    <div>
+    
+    <div class="arrow">
       <img src="./assets/images/icon-arrow.svg" alt="a icon with a arrow pointing down">
     </div>
 
-    <div class="flex-group">
-      <p><span id="calc-years">--</span>years</p>
-      <p><span id="calc-months">--</span>months</p>
-      <p><span id="calc-days">--</span>days</p>
+    <div class="display-age">
+      <p class="display-age__text"><span id="calc-years">--</span> years</p>
+      <p class="display-age__text"><span id="calc-months">--</span> months</p>
+      <p class="display-age__text"><span id="calc-days">--</span> days</p>
     </div>
   </main>
 </div>
